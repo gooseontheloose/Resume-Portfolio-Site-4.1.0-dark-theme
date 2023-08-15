@@ -187,19 +187,18 @@
         }
 
 
-    #mySidebar {
-        transition: width 0.3s ease-in-out;
-    }
+        #mySidebar {
+            transition: width 0.3s ease-in-out;
+        }
 
-    #hiddenSidebar {
-        transition: width 0.3s ease-in-out;
-    }
+        #hiddenSidebar {
+            transition: width 0.3s ease-in-out;
+        }
     </style>
 </head>
 
 <!-- Top container -->
-<div class="w3-bar w3-top w3-black w3-large" 
-    style="z-index:4; display: flex; justify-content: center;">
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4; display: flex; justify-content: center;">
     <div class=" w3-left-align">
         <h5><i class="fa fa-compass fa-fw" style="justify-content: left"></i> Page Navigation</h5>
     </div>
@@ -212,13 +211,11 @@
 </div>
 
 <!-- Secondary Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-animate-left" 
-    style="z-index:2;width:200px;margin-top: -20px; height: 101%; visibility: hidden;"
-    id="hiddenSidebar">
+<nav class="w3-sidebar w3-collapse w3-animate-left"
+    style="z-index:2;width:200px;margin-top: -20px; height: 101%; visibility: hidden;" id="hiddenSidebar">
     <div class="w3-container" style="width: 200px;"> <!-- Adjusted width -->
-        <button onclick="openNav()" 
-        class="w3-bar-item w3-button w3-padding" 
-        style="border-radius: 4px; width:fit-content; visibility: visible;
+        <button onclick="openNav()" class="w3-bar-item w3-button w3-padding"
+            style="border-radius: 4px; width:fit-content; visibility: visible;
         position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); background-color: #596CCE; color: white; display: block; padding: 16px 20px;">
             <i class="fa fa-bars fa-fw"></i> Open Menu
         </button>
@@ -228,8 +225,7 @@
 
 <!-- Main Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-light-grey w3-animate-left"
-    style="z-index:3;width:200px;margin-top: -20px; height: 101%;" 
-    id="mySidebar">
+    style="z-index:3;width:200px;margin-top: -20px; height: 101%; overflow: hidden;" id="mySidebar">
     <div class="w3-container">
         <h5><i class="fa fa-compass fa-fw"></i> Page Navigation</h5>
     </div>
@@ -255,10 +251,11 @@
         </a>
         <!-- Additional buttons at the bottom-center of the navigation -->
 
-        <button onclick="closeNav()" class="3-bar-item w3-button w3-padding" style="border-radius: 4px;
+        <button onclick="closeNav()" class="3-bar-item w3-button w3-padding"
+            style="border-radius: 4px;
         position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background-color: #596CCE; color: white; display: block; padding: 16px 20px;">
             <i class="fa fa-times fa-fw"></i> Close Menu
-    </button>
+        </button>
 
         <a href="#" onclick="openbuttonOptionsModal()" class="w3-bar-item w3-button w3-padding"
             style="         border-radius: 4px;
@@ -1147,17 +1144,18 @@
             window.addEventListener('scroll', handleScroll);
 
             function openNav() {
-  document.getElementById("mySidebar").style.width = "200px";
-  document.getElementById("hiddenSidebar").style.width = "0px";
-  document.getElementById("main").style.marginLeft = "200px";
-}
+                document.getElementById("mySidebar").style.width = "200px";
+                document.getElementById("hiddenSidebar").style.width = "0px";
+                document.getElementById("main").style.marginLeft = "200px";
+            }
 
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("hiddenSidebar").style.width = "200px";
-  document.getElementById("main").style.marginLeft= "0";
-}
-    </script>
+            function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+                document.getElementById("hiddenSidebar").style.width = "200px";
+                document.getElementById("main").style.marginLeft = "0";
+            }
+        </script>
         <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </body>
+
 </html>
