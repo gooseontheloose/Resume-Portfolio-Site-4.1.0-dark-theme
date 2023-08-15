@@ -194,11 +194,15 @@
         #hiddenSidebar {
             transition: width 0.3s ease-in-out;
         }
+
     </style>
 </head>
 
 <!-- Top container -->
 <div class="w3-bar w3-top w3-black w3-large" style="z-index:4; display: flex; justify-content: center;">
+    <div class="w3-container w3-display-left w3-hide-small w3-hide-medium" id="pageNav">
+        <h5><i class="fa fa-compass fa-fw  " style="justify-content: left"></i> Page Navigation</h5>
+    </div>
     <a href="#" class="w3-button w3-hover-none w3-text-grey w3-hover-text-white top-nav-link">Home</a>
     <a href="#" onclick="openbuttonOptionsModal()"
         class="w3-button w3-hover-none w3-text-grey w3-hover-text-white top-nav-link">Hire Me</a>
@@ -223,7 +227,7 @@
 <!-- Main Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-light-grey w3-animate-left"
     style="z-index:3;width:200px;margin-top: -20px; height: 101%; overflow: hidden;" id="mySidebar">
-    <div class="w3-container">
+    <div class="w3-container" style="white-space: nowrap;">
         <h5><i class="fa fa-compass fa-fw"></i> Page Navigation</h5>
     </div>
     <div class="w3-bar-blockc">
@@ -259,7 +263,7 @@
                position: absolute; bottom: 120px; left: 50%; transform: translateX(-50%); background-color: #596CCE; color: white; display: block; padding: 16px 20px;">
             <i class="fa fa-info-circle fa-fw"></i> Contact
         </a>
-        <a href="https://github.com/gooseontheloose/Resume-Portfolio-Site-3.0.0/" target="_blank"
+        <a href="https://github.com/gooseontheloose/Resume-Portfolio-Site-4.1.0-dark-theme" target="_blank"
             class="w3-bar-item w3-button w3-padding"
             style="         border-radius: 4px; position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%); background-color: #596CCE; color: white; display: block; padding: 16px 20px;">
             <i class="fa fa-github fa-fw"></i> Steal My Site
@@ -1133,7 +1137,6 @@
                     topContainer.classList.remove('hide-top-container');
                     topContainer.classList.add('show-top-container');
                 }
-
                 // Update the last scroll position
                 lastScrollPosition = currentScrollPosition;
             }
@@ -1143,16 +1146,17 @@
             function openNav() {
                 document.getElementById("mySidebar").style.width = "200px";
                 document.getElementById("hiddenSidebar").style.width = "0px";
+                document.getElementById("pageNav").style.display = "block";
                 document.getElementById("main").style.marginLeft = "200px";
             }
 
             function closeNav() {
                 document.getElementById("mySidebar").style.width = "0";
                 document.getElementById("hiddenSidebar").style.width = "200px";
+                document.getElementById("pageNav").style.display = "none";
                 document.getElementById("main").style.marginLeft = "0";
             }
         </script>
         <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </body>
-
 </html>
